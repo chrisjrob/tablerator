@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# times-tables.pl
+# tablerator.pl
 
 # Copyright (C) 2016 Christopher Roberts
 #
