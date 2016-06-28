@@ -27,8 +27,8 @@ use constant BLANK => '__';
 my $file  = 'tables.md';
 my $tables = 10;
 my $owl   = {
-    'bronze'    => 1,
-    'silver'    => 0,
+    'bronze'    => 0,
+    'silver'    => 1,
     'gold'      => 0
 };
 
@@ -43,7 +43,7 @@ exit;
 sub regenerate_pdf {
     my $pdf = $file;
     $pdf =~ s/\.md/.pdf/;
-    `pandoc $file -o $pdf`;
+    `pandoc -V geometry:margin=1in -V geometry:a4paper -o $pdf $file`;
 }
 
 sub create_tables {
